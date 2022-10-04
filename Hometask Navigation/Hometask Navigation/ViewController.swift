@@ -29,6 +29,16 @@ class ViewController: UIViewController {
         createDatePicker()
     }
     
+    @IBAction func saveButtonPressed() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "PersonInfoViewController")
+        guard let personInfoViewController = destination as? PersonInfoViewController else {
+            return }
+        personInfoViewController.person = Person(name: nameTextField.text ?? " ", surname: surnameTextField.text ?? "" , birthday: birthdayTextField.text ?? "" )
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    
     func setupTextFields (textField: UITextField) {
         textField.layer.borderColor = UIColor.black.cgColor
         textField.layer.borderWidth = 2

@@ -9,10 +9,18 @@ import UIKit
 
 class PersonInfoViewController: UIViewController {
 
+    var person: Person!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nameLabel.text = person.name
+        surnameLabel.text = person.surname
+        birthdayLabel.text = person.birthday
+   
     }
     
 

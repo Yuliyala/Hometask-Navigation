@@ -67,6 +67,9 @@
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="idj-cY-fcU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -193,6 +196,11 @@
                             <constraint firstItem="PsF-UU-TqJ" firstAttribute="leading" secondItem="5Iu-fR-c2v" secondAttribute="leading" constant="12" id="wm1-ga-eQb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="FcS-vs-z4y" id="s34-RJ-Hej"/>
+                        <outlet property="nameLabel" destination="tJ0-og-Z5n" id="Dgb-pY-qW8"/>
+                        <outlet property="surnameLabel" destination="InD-6R-nIG" id="YGh-Xj-TuW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf5-Gw-VSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
