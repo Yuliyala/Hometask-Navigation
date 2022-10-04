@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var birthdayTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        nameTextField.placeholder = "Name"
+        surnameTextField.placeholder = "Surname"
+        birthdayTextField.placeholder = "Date of birth"
     }
 
 
