@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -21,10 +22,27 @@ class ViewController: UIViewController {
         nameTextField.placeholder = "Name"
         surnameTextField.placeholder = "Surname"
         birthdayTextField.placeholder = "Date of birth"
-        
+        setupTextFields(textField: nameTextField)
+        setupTextFields(textField: surnameTextField)
+        setupTextFields(textField: birthdayTextField)
+       setupButton(button: saveButton)
         createDatePicker()
     }
+    
+    func setupTextFields (textField: UITextField) {
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 2
+        textField.layer.masksToBounds = true
+        textField.layer.cornerRadius = 8
+    }
 
+    func setupButton (button: UIButton) {
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 2
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 8
+    }
+    
     func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date

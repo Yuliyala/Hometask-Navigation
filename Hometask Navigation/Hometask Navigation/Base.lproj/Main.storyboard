@@ -57,10 +57,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-g3-bjh">
-                                <rect key="frame" x="16" y="762" width="382" height="50"/>
+                                <rect key="frame" x="16" y="746" width="382" height="66"/>
                                 <color key="backgroundColor" red="0.27137537907226433" green="0.60516832001192389" blue="0.61680156052714641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KxU-Go-sIs"/>
+                                    <constraint firstAttribute="height" constant="66" id="KxU-Go-sIs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -90,6 +90,7 @@
                     <connections>
                         <outlet property="birthdayTextField" destination="ZGl-si-nMT" id="hRQ-6k-cMi"/>
                         <outlet property="nameTextField" destination="yuG-Sg-4Fz" id="wN5-hB-NEg"/>
+                        <outlet property="saveButton" destination="7xy-g3-bjh" id="rg0-aS-eD3"/>
                         <outlet property="surnameTextField" destination="dJU-8C-P8L" id="uBt-fs-UJk"/>
                     </connections>
                 </viewController>
