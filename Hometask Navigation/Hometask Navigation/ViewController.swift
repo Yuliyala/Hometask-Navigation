@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
+
+        checkTextField()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destination = storyboard.instantiateViewController(withIdentifier: "PersonInfoViewController")
         guard let personInfoViewController = destination as? PersonInfoViewController else {
@@ -37,7 +39,32 @@ class ViewController: UIViewController {
         personInfoViewController.person = Person(name: nameTextField.text ?? " ", surname: surnameTextField.text ?? "" , birthday: birthdayTextField.text ?? "" )
         navigationController?.pushViewController(destination, animated: true)
     }
-    
+        
+    func presentAlert(title: String, message: String, preferredStyle: UIAlertController.Style ) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+            let action = UIAlertAction(title: "OK", style: .default) { action in
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    func checkTextField() {
+        
+        var name = ""
+        var surname = ""
+        var birthday = ""
+
+        if let nameString = nameTextField.text, !nameString.isEmpty,
+           let surnameString = surnameTextField.text, !surnameString.isEmpty,
+           let birtdayString = birthdayTextField.text, !birtdayString.isEmpty {
+            name = nameString
+            surname = surnameString
+            birthday = birtdayString
+        }
+        if name.count < 1 || surname.count < 1 || birthday.count < 1 {
+            presentAlert(title: "Error", message: "Enter name , surname and date of birth ", preferredStyle: .alert)
+        }
+    }
     
     func setupTextFields (textField: UITextField) {
         textField.layer.borderColor = UIColor.black.cgColor

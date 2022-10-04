@@ -111,7 +111,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ0-og-Z5n">
                                 <rect key="frame" x="12" y="144" width="390" height="40"/>
-                                <color key="backgroundColor" red="0.6494124451350437" green="1" blue="0.92427376466285627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.78493235120361327" green="0.97374288528508124" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bGJ-RM-z2P"/>
                                 </constraints>
@@ -131,7 +131,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InD-6R-nIG">
                                 <rect key="frame" x="16" y="294" width="382" height="40"/>
-                                <color key="backgroundColor" red="0.64941244509999996" green="1" blue="0.9242737647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.78493235120000004" green="0.97374288529999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="S0b-Hy-LjR"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="YH0-rg-exZ"/>
@@ -152,7 +152,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-vs-z4y">
                                 <rect key="frame" x="16" y="444" width="382" height="40"/>
-                                <color key="backgroundColor" red="0.64941244509999996" green="1" blue="0.9242737647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.78493235120000004" green="0.97374288529999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="1t2-6c-06T"/>
                                     <constraint firstAttribute="height" constant="40" id="2Ex-OO-H9X"/>
@@ -173,7 +173,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Iu-fR-c2v"/>
-                        <color key="backgroundColor" red="0.33926687990186644" green="0.95493524724786927" blue="0.87192396554638663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.1853716051" green="1" blue="0.97535019560000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="tJ0-og-Z5n" firstAttribute="leading" secondItem="5Iu-fR-c2v" secondAttribute="leading" constant="12" id="01a-Fy-PzM"/>
                             <constraint firstItem="5Iu-fR-c2v" firstAttribute="trailing" secondItem="InD-6R-nIG" secondAttribute="trailing" constant="16" id="2zU-Yf-WpI"/>
