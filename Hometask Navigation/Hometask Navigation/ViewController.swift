@@ -8,52 +8,46 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
+    
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameTextField.placeholder = "Name"
-        surnameTextField.placeholder = "Surname"
-        birthdayTextField.placeholder = "Date of birth"
-        setupTextFields(textField: nameTextField)
-        setupTextFields(textField: surnameTextField)
-        setupTextFields(textField: birthdayTextField)
-       setupButton(button: saveButton)
-        createDatePicker()
+        setup()
     }
     
     @IBAction func saveButtonPressed() {
-
-        checkTextField()
+        
+        if checkTextField() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destination = storyboard.instantiateViewController(withIdentifier: "PersonInfoViewController")
         guard let personInfoViewController = destination as? PersonInfoViewController else {
             return }
         personInfoViewController.person = Person(name: nameTextField.text ?? " ", surname: surnameTextField.text ?? "" , birthday: birthdayTextField.text ?? "" )
         navigationController?.pushViewController(destination, animated: true)
-    }
-        
-    func presentAlert(title: String, message: String, preferredStyle: UIAlertController.Style ) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-            let action = UIAlertAction(title: "OK", style: .default) { action in
-            }
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+        } else {
+            return
         }
-        
-    func checkTextField() {
+    }
+    func presentAlert(title: String, message: String, preferredStyle: UIAlertController.Style ) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+        let action = UIAlertAction(title: "OK", style: .default) { action in
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func checkTextField() -> Bool {
         
         var name = ""
         var surname = ""
         var birthday = ""
-
+        
         if let nameString = nameTextField.text, !nameString.isEmpty,
            let surnameString = surnameTextField.text, !surnameString.isEmpty,
            let birtdayString = birthdayTextField.text, !birtdayString.isEmpty {
@@ -64,6 +58,18 @@ class ViewController: UIViewController {
         if name.count < 1 || surname.count < 1 || birthday.count < 1 {
             presentAlert(title: "Error", message: "Enter name , surname and date of birth ", preferredStyle: .alert)
         }
+        return true
+    }
+    
+    func setup() {
+        nameTextField.placeholder = "Name"
+        surnameTextField.placeholder = "Surname"
+        birthdayTextField.placeholder = "Date of birth"
+        setupTextFields(textField: nameTextField)
+        setupTextFields(textField: surnameTextField)
+        setupTextFields(textField: birthdayTextField)
+        setupButton(button: saveButton)
+        createDatePicker()
     }
     
     func setupTextFields (textField: UITextField) {
@@ -72,7 +78,7 @@ class ViewController: UIViewController {
         textField.layer.masksToBounds = true
         textField.layer.cornerRadius = 8
     }
-
+    
     func setupButton (button: UIButton) {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 2
