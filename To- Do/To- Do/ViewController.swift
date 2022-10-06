@@ -7,14 +7,22 @@
 
 import UIKit
 
+struct Tasks {
+    var title: String
+    var detail: String
+    var isDone: Bool
+}
+
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tasksTextField: UITableView!
+    var tasks: [Tasks] = []
+  
+    @IBOutlet weak var tasksTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tasksTextField.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tasksTextField.rowHeight = 60
+        tasksTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tasksTableView.rowHeight = 60
     }
 
     
@@ -27,7 +35,7 @@ class ViewController: UIViewController {
 }
 extension ViewController: UITableViewDataSource {
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+       return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
