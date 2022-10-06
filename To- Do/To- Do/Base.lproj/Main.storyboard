@@ -12,7 +12,6 @@
         <!--Navigation Controller-->
         <scene sceneID="39c-XQ-b8J">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YyB-Ex-YzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="TsP-UQ-Jxg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SMo-6l-mUf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,6 +21,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lVk-ZJ-4sA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YyB-Ex-YzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1232" y="19"/>
         </scene>
@@ -77,6 +77,9 @@
                     <navigationItem key="navigationItem" title="TO - DO List" id="Ozw-Fj-OFx">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="J38-my-aJC">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="addNewTask:" destination="BYZ-38-t0r" id="BaI-DL-efc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
