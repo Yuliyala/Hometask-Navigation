@@ -9,10 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
+    @IBOutlet weak var tasksTextField: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        tasksTextField.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tasksTextField.rowHeight = 60
     }
 
     
@@ -23,5 +25,16 @@ class ViewController: UIViewController {
     }
     
 }
-
+extension ViewController: UITableViewDataSource {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        return cell
+    }
+    
+    
+}
 
