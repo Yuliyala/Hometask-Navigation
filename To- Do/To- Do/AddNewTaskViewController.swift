@@ -43,7 +43,7 @@ class AddNewTaskViewController: UIViewController {
            let detail = detailTextField.text, detail.count > 0 {
             task = Tasks(title: title, detail: detail, isDone: false)
         }
-//        guard let task = Tasks(title: titleTextField.text, detail: detailTextField.text!, isDone: false) else {return}
+
         delegate?.addTasks(task: task!)
         navigationController?.popViewController(animated: true)
     }
